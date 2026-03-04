@@ -1,0 +1,300 @@
+{
+  "data": {
+    "nodeMenuItems": {
+      "__typename": "NodeMenuItemConnection",
+      "nodes": [
+        {
+          "__typename": "NodeMenuItem",
+          "id": "item-carnitas",
+          "title": "Slow-Roasted Carnitas Taco",
+          "path": "/menu/carnitas-taco",
+          "body": {
+            "processed": "<p>Our signature taco. Pork shoulder braised low and slow for 8 hours in citrus and spices, then crisped on the flat-top. Served on a double corn tortilla with house-made salsa verde, pickled red onion, cilantro, and a squeeze of lime.</p><p>This is the taco that started it all — the recipe handed down from our founder's abuela in Michoacan.</p>",
+            "summary": "Our signature taco. Pork shoulder braised low and slow for 8 hours in citrus and spices, then crisped on the flat-top. Served on a double corn tortilla with house-made salsa verde, pickled red onion, "
+          },
+          "price": "$4.50",
+          "menuCategory": [
+            {
+              "id": "tacos",
+              "name": "tacos"
+            }
+          ],
+          "spiceLevel": "Medium",
+          "dietaryInfo": [
+            "Gluten-Free"
+          ],
+          "isBestseller": true,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=800&q=80",
+            "alt": "Carnitas taco with salsa verde and pickled onion",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "item-al-pastor",
+          "title": "Al Pastor Taco",
+          "path": "/menu/al-pastor-taco",
+          "body": {
+            "processed": "<p>Thinly sliced pork marinated in a blend of dried chiles, achiote, and pineapple, cooked on our vertical spit and shaved to order. Topped with grilled pineapple, diced white onion, cilantro, and our smoky chipotle crema.</p>",
+            "summary": "Thinly sliced pork marinated in a blend of dried chiles, achiote, and pineapple, cooked on our vertical spit and shaved to order. Topped with grilled pineapple, diced white onion, cilantro, and our sm"
+          },
+          "price": "$4.50",
+          "menuCategory": [
+            {
+              "id": "tacos",
+              "name": "tacos"
+            }
+          ],
+          "spiceLevel": "Medium-Hot",
+          "dietaryInfo": [
+            "Gluten-Free"
+          ],
+          "isBestseller": true,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=800&q=80",
+            "alt": "Al pastor taco with grilled pineapple",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "item-baja-fish",
+          "title": "Baja Fish Taco",
+          "path": "/menu/baja-fish-taco",
+          "body": {
+            "processed": "<p>Beer-battered Pacific cod fried until golden and crispy, nestled in a flour tortilla with shredded cabbage, pickled jalapeno, house tartar sauce, and a drizzle of lime crema. Light, crunchy, and bursting with flavor.</p>",
+            "summary": "Beer-battered Pacific cod fried until golden and crispy, nestled in a flour tortilla with shredded cabbage, pickled jalapeno, house tartar sauce, and a drizzle of lime crema. Light, crunchy, and burst"
+          },
+          "price": "$5.00",
+          "menuCategory": [
+            {
+              "id": "tacos",
+              "name": "tacos"
+            }
+          ],
+          "spiceLevel": "Mild",
+          "dietaryInfo": [
+            "Contains Gluten",
+            "Contains Fish"
+          ],
+          "isBestseller": true,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1512838243191-e81e8f66f1fd?w=800&q=80",
+            "alt": "Crispy Baja fish taco with lime crema",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1512838243191-e81e8f66f1fd?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1512838243191-e81e8f66f1fd?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1512838243191-e81e8f66f1fd?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "item-burrito",
+          "title": "Loaded Street Burrito",
+          "path": "/menu/loaded-burrito",
+          "body": {
+            "processed": "<p>A massive flour tortilla stuffed with your choice of protein (carnitas, al pastor, grilled chicken, or sofritas), cilantro-lime rice, black beans, pico de gallo, guacamole, sour cream, and queso fresco. Grilled on the flat-top for a crispy, golden exterior.</p>",
+            "summary": "A massive flour tortilla stuffed with your choice of protein (carnitas, al pastor, grilled chicken, or sofritas), cilantro-lime rice, black beans, pico de gallo, guacamole, sour cream, and queso fresc"
+          },
+          "price": "$12.00",
+          "menuCategory": [
+            {
+              "id": "burritos",
+              "name": "burritos"
+            }
+          ],
+          "spiceLevel": "Your choice",
+          "dietaryInfo": [
+            "Vegetarian option available"
+          ],
+          "isBestseller": false,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=800&q=80",
+            "alt": "Loaded burrito cut in half showing fillings",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "item-bowl",
+          "title": "Fuego Bowl",
+          "path": "/menu/fuego-bowl",
+          "body": {
+            "processed": "<p>Everything you love about our burritos, deconstructed in a bowl. Cilantro-lime rice, black beans, your choice of protein, house-made guacamole, pico de gallo, pickled jalapenos, queso fresco, and a drizzle of our signature Fuego sauce. Perfect for those who want all the flavor without the tortilla.</p>",
+            "summary": "Everything you love about our burritos, deconstructed in a bowl. Cilantro-lime rice, black beans, your choice of protein, house-made guacamole, pico de gallo, pickled jalapenos, queso fresco, and a dr"
+          },
+          "price": "$11.00",
+          "menuCategory": [
+            {
+              "id": "bowls",
+              "name": "bowls"
+            }
+          ],
+          "spiceLevel": "Your choice",
+          "dietaryInfo": [
+            "Gluten-Free",
+            "Vegetarian option available"
+          ],
+          "isBestseller": false,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1543352634-a1c51d9f1fa7?w=800&q=80",
+            "alt": "Colorful burrito bowl with fresh toppings",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1543352634-a1c51d9f1fa7?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1543352634-a1c51d9f1fa7?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1543352634-a1c51d9f1fa7?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeMenuItem",
+          "id": "item-elote",
+          "title": "Street Elote",
+          "path": "/menu/street-elote",
+          "body": {
+            "processed": "<p>Fire-roasted corn on the cob slathered with mayo, cotija cheese, chili powder, and a squeeze of lime. A classic Mexican street food staple done right. Available on the cob or cut off as esquites in a cup.</p>",
+            "summary": "Fire-roasted corn on the cob slathered with mayo, cotija cheese, chili powder, and a squeeze of lime. A classic Mexican street food staple done right. Available on the cob or cut off as esquites in a "
+          },
+          "price": "$5.00",
+          "menuCategory": [
+            {
+              "id": "sides",
+              "name": "sides"
+            }
+          ],
+          "spiceLevel": "Mild",
+          "dietaryInfo": [
+            "Gluten-Free",
+            "Vegetarian"
+          ],
+          "isBestseller": false,
+          "image": {
+            "url": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80",
+            "alt": "Mexican street corn with cotija cheese and chili",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

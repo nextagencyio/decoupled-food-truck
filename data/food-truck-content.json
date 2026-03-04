@@ -1,0 +1,294 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Food truck homepage with hero, stats, featured menu items, and CTA",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text" },
+        { "id": "stats_items", "label": "Statistics", "type": "paragraph(stat_item)[]" },
+        { "id": "featured_items_title", "label": "Featured Items Title", "type": "string" },
+        { "id": "cta_title", "label": "CTA Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "menu_item",
+      "label": "Menu Item",
+      "description": "Food truck menu items",
+      "body": true,
+      "fields": [
+        { "id": "price", "label": "Price", "type": "string" },
+        { "id": "menu_category", "label": "Category", "type": "term(menu_categories)[]" },
+        { "id": "spice_level", "label": "Spice Level", "type": "string" },
+        { "id": "dietary_info", "label": "Dietary Info", "type": "string[]" },
+        { "id": "is_bestseller", "label": "Bestseller", "type": "bool" },
+        { "id": "image", "label": "Item Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "location_schedule",
+      "label": "Location Schedule",
+      "description": "Weekly schedule with locations and times",
+      "body": true,
+      "fields": [
+        { "id": "day_of_week", "label": "Day of Week", "type": "string" },
+        { "id": "location_name", "label": "Location Name", "type": "string" },
+        { "id": "address", "label": "Address", "type": "string" },
+        { "id": "start_time", "label": "Start Time", "type": "string" },
+        { "id": "end_time", "label": "End Time", "type": "string" },
+        { "id": "neighborhood", "label": "Neighborhood", "type": "string" },
+        { "id": "image", "label": "Location Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content pages",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "stat_item",
+      "label": "Statistic Item",
+      "fields": [
+        { "id": "number", "label": "Number", "type": "string!" },
+        { "id": "label", "label": "Label", "type": "string!" }
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "vocabulary": "menu_categories",
+      "label": "Menu Categories",
+      "terms": ["Tacos", "Burritos", "Bowls", "Sides", "Drinks", "Specials"]
+    }
+  ],
+  "content": [
+    {
+      "id": "stat-served",
+      "type": "paragraph.stat_item",
+      "values": { "number": "100K+", "label": "Tacos Served" }
+    },
+    {
+      "id": "stat-locations",
+      "type": "paragraph.stat_item",
+      "values": { "number": "6", "label": "Weekly Locations" }
+    },
+    {
+      "id": "stat-years",
+      "type": "paragraph.stat_item",
+      "values": { "number": "7", "label": "Years Rolling" }
+    },
+    {
+      "id": "stat-rating",
+      "type": "paragraph.stat_item",
+      "values": { "number": "4.9", "label": "Yelp Rating" }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "Welcome to Fuego Street Kitchen",
+        "hero_title": "Street Tacos. Real Flavor. No Boundaries.",
+        "hero_subtitle": "Fire-Grilled Tacos & More From Our Truck to You",
+        "hero_description": "<p>Fuego Street Kitchen brings bold, authentic street food to your neighborhood. Every taco, burrito, and bowl is made from scratch using family recipes, locally sourced ingredients, and fire-grilled meats. Find us on the streets or book us for your next event.</p>",
+        "stats_items": ["@stat-served", "@stat-locations", "@stat-years", "@stat-rating"],
+        "featured_items_title": "Fan Favorites",
+        "cta_title": "Find Us This Week",
+        "cta_description": "<p>We roll to a different spot every day of the week. Check our schedule to find us near you, or follow us on social media for real-time location updates and daily specials.</p>",
+        "cta_primary": "View Schedule",
+        "cta_secondary": "Book for Your Event"
+      }
+    },
+    {
+      "id": "item-carnitas",
+      "type": "node.menu_item",
+      "path": "/menu/carnitas-taco",
+      "values": {
+        "title": "Slow-Roasted Carnitas Taco",
+        "body": "<p>Our signature taco. Pork shoulder braised low and slow for 8 hours in citrus and spices, then crisped on the flat-top. Served on a double corn tortilla with house-made salsa verde, pickled red onion, cilantro, and a squeeze of lime.</p><p>This is the taco that started it all — the recipe handed down from our founder's abuela in Michoacan.</p>",
+        "price": "$4.50",
+        "menu_category": ["tacos"],
+        "spice_level": "Medium",
+        "dietary_info": ["Gluten-Free"],
+        "is_bestseller": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=800&q=80",
+          "alt": "Carnitas taco with salsa verde and pickled onion"
+        }
+      }
+    },
+    {
+      "id": "item-al-pastor",
+      "type": "node.menu_item",
+      "path": "/menu/al-pastor-taco",
+      "values": {
+        "title": "Al Pastor Taco",
+        "body": "<p>Thinly sliced pork marinated in a blend of dried chiles, achiote, and pineapple, cooked on our vertical spit and shaved to order. Topped with grilled pineapple, diced white onion, cilantro, and our smoky chipotle crema.</p>",
+        "price": "$4.50",
+        "menu_category": ["tacos"],
+        "spice_level": "Medium-Hot",
+        "dietary_info": ["Gluten-Free"],
+        "is_bestseller": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=800&q=80",
+          "alt": "Al pastor taco with grilled pineapple"
+        }
+      }
+    },
+    {
+      "id": "item-baja-fish",
+      "type": "node.menu_item",
+      "path": "/menu/baja-fish-taco",
+      "values": {
+        "title": "Baja Fish Taco",
+        "body": "<p>Beer-battered Pacific cod fried until golden and crispy, nestled in a flour tortilla with shredded cabbage, pickled jalapeno, house tartar sauce, and a drizzle of lime crema. Light, crunchy, and bursting with flavor.</p>",
+        "price": "$5.00",
+        "menu_category": ["tacos"],
+        "spice_level": "Mild",
+        "dietary_info": ["Contains Gluten", "Contains Fish"],
+        "is_bestseller": true,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1512838243191-e81e8f66f1fd?w=800&q=80",
+          "alt": "Crispy Baja fish taco with lime crema"
+        }
+      }
+    },
+    {
+      "id": "item-burrito",
+      "type": "node.menu_item",
+      "path": "/menu/loaded-burrito",
+      "values": {
+        "title": "Loaded Street Burrito",
+        "body": "<p>A massive flour tortilla stuffed with your choice of protein (carnitas, al pastor, grilled chicken, or sofritas), cilantro-lime rice, black beans, pico de gallo, guacamole, sour cream, and queso fresco. Grilled on the flat-top for a crispy, golden exterior.</p>",
+        "price": "$12.00",
+        "menu_category": ["burritos"],
+        "spice_level": "Your choice",
+        "dietary_info": ["Vegetarian option available"],
+        "is_bestseller": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=800&q=80",
+          "alt": "Loaded burrito cut in half showing fillings"
+        }
+      }
+    },
+    {
+      "id": "item-bowl",
+      "type": "node.menu_item",
+      "path": "/menu/fuego-bowl",
+      "values": {
+        "title": "Fuego Bowl",
+        "body": "<p>Everything you love about our burritos, deconstructed in a bowl. Cilantro-lime rice, black beans, your choice of protein, house-made guacamole, pico de gallo, pickled jalapenos, queso fresco, and a drizzle of our signature Fuego sauce. Perfect for those who want all the flavor without the tortilla.</p>",
+        "price": "$11.00",
+        "menu_category": ["bowls"],
+        "spice_level": "Your choice",
+        "dietary_info": ["Gluten-Free", "Vegetarian option available"],
+        "is_bestseller": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1543352634-a1c51d9f1fa7?w=800&q=80",
+          "alt": "Colorful burrito bowl with fresh toppings"
+        }
+      }
+    },
+    {
+      "id": "item-elote",
+      "type": "node.menu_item",
+      "path": "/menu/street-elote",
+      "values": {
+        "title": "Street Elote",
+        "body": "<p>Fire-roasted corn on the cob slathered with mayo, cotija cheese, chili powder, and a squeeze of lime. A classic Mexican street food staple done right. Available on the cob or cut off as esquites in a cup.</p>",
+        "price": "$5.00",
+        "menu_category": ["sides"],
+        "spice_level": "Mild",
+        "dietary_info": ["Gluten-Free", "Vegetarian"],
+        "is_bestseller": false,
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80",
+          "alt": "Mexican street corn with cotija cheese and chili"
+        }
+      }
+    },
+    {
+      "id": "location-monday",
+      "type": "node.location_schedule",
+      "path": "/schedule/monday-tech-park",
+      "values": {
+        "title": "Monday: Tech Park",
+        "body": "<p>Start your week right with Fuego! We set up in the main courtyard of the Tech Park office complex, serving lunch to the busy professionals of the innovation district. Look for us near the central fountain. Free parking in the visitor lot.</p>",
+        "day_of_week": "Monday",
+        "location_name": "Silicon Valley Tech Park",
+        "address": "1200 Innovation Drive, Tech Park",
+        "start_time": "11:00 AM",
+        "end_time": "2:00 PM",
+        "neighborhood": "Innovation District",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=800&q=80",
+          "alt": "Food truck parked in an office park courtyard"
+        }
+      }
+    },
+    {
+      "id": "location-wednesday",
+      "type": "node.location_schedule",
+      "path": "/schedule/wednesday-brewery-row",
+      "values": {
+        "title": "Wednesday: Brewery Row",
+        "body": "<p>Hump day calls for tacos and craft beer! We park right outside Iron Rail Brewing Co. every Wednesday evening. Grab your favorite brew inside, then come out and order from our full menu. Live music on the patio most weeks.</p>",
+        "day_of_week": "Wednesday",
+        "location_name": "Brewery Row",
+        "address": "800 Warehouse Ave, Brewery District",
+        "start_time": "5:00 PM",
+        "end_time": "9:00 PM",
+        "neighborhood": "Brewery District",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1567129937968-cdad8f07e2f8?w=800&q=80",
+          "alt": "Food truck parked near a brewery at evening"
+        }
+      }
+    },
+    {
+      "id": "location-saturday",
+      "type": "node.location_schedule",
+      "path": "/schedule/saturday-farmers-market",
+      "values": {
+        "title": "Saturday: Downtown Farmers Market",
+        "body": "<p>Our busiest day of the week! We set up at the downtown farmers market every Saturday morning. Grab fresh produce from the vendors, then swing by Fuego for breakfast tacos and our famous horchata. We're located at the west entrance near the fountain.</p>",
+        "day_of_week": "Saturday",
+        "location_name": "Downtown Farmers Market",
+        "address": "Main Street & 3rd Ave, Downtown",
+        "start_time": "8:00 AM",
+        "end_time": "2:00 PM",
+        "neighborhood": "Downtown",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=80",
+          "alt": "Busy farmers market with food truck in background"
+        }
+      }
+    },
+    {
+      "id": "page-about",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About Fuego Street Kitchen",
+        "body": "<p>Fuego Street Kitchen was born in 2019 when chef and founder Carlos Medina decided to bring his family's recipes to the streets. Growing up in his abuela's kitchen in Michoacan, Mexico, Carlos learned that the best food comes from simple ingredients, real technique, and a lot of heart.</p><h2>Our Food</h2><p>Everything on our truck is made from scratch daily. We grind our own spice blends, press our own tortillas, and slow-cook our meats overnight. We source produce from local farms whenever possible and never use frozen, pre-made, or artificial ingredients.</p><h2>The Truck</h2><p>Our custom-built food truck — nicknamed \"La Bestia\" — is equipped with a full commercial kitchen including a vertical spit for al pastor, a flat-top griddle, a deep fryer, and a wood-fired section for our signature char-grilled flavor.</p><h2>Book Us</h2><p>Fuego is available for private events, corporate lunches, weddings, festivals, and parties. We can serve groups of 30 to 300+. Contact us for custom menus and pricing.</p>"
+      }
+    },
+    {
+      "id": "page-catering",
+      "type": "node.page",
+      "path": "/catering",
+      "values": {
+        "title": "Event Catering & Private Bookings",
+        "body": "<h2>Bring Fuego to Your Event</h2><p>Want a taco truck at your wedding? A burrito bar at your corporate event? Fuego Street Kitchen is available for private bookings and catering throughout the region.</p><h2>Catering Packages</h2><ul><li><strong>Taco Bar</strong> (min. 30 guests) — $15/person: 3 proteins, tortillas, all toppings, sides, and agua fresca</li><li><strong>Full Menu Experience</strong> (min. 50 guests) — $22/person: Full truck menu plus elote, chips & guac, and horchata</li><li><strong>Premium Fiesta</strong> (min. 75 guests) — $30/person: Everything above plus appetizers, custom menu items, and dessert</li></ul><h2>How It Works</h2><ol><li>Tell us your date, guest count, and event details</li><li>We'll send a custom proposal within 24 hours</li><li>Confirm with a 50% deposit</li><li>We show up, set up, serve, and clean up</li></ol><h2>Contact</h2><p>Email: events@fuegostreet.com<br/>Phone: (555) 432-1098<br/>Instagram: @fuegostreet</p>"
+      }
+    }
+  ]
+}

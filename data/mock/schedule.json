@@ -1,0 +1,135 @@
+{
+  "data": {
+    "nodeLocationSchedules": {
+      "__typename": "NodeLocationScheduleConnection",
+      "nodes": [
+        {
+          "__typename": "NodeLocationSchedule",
+          "id": "location-monday",
+          "title": "Monday: Tech Park",
+          "path": "/schedule/monday-tech-park",
+          "body": {
+            "processed": "<p>Start your week right with Fuego! We set up in the main courtyard of the Tech Park office complex, serving lunch to the busy professionals of the innovation district. Look for us near the central fountain. Free parking in the visitor lot.</p>",
+            "summary": "Start your week right with Fuego! We set up in the main courtyard of the Tech Park office complex, serving lunch to the busy professionals of the innovation district. Look for us near the central foun"
+          },
+          "dayOfWeek": "Monday",
+          "locationName": "Silicon Valley Tech Park",
+          "address": "1200 Innovation Drive, Tech Park",
+          "startTime": "11:00 AM",
+          "endTime": "2:00 PM",
+          "neighborhood": "Innovation District",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=800&q=80",
+            "alt": "Food truck parked in an office park courtyard",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeLocationSchedule",
+          "id": "location-wednesday",
+          "title": "Wednesday: Brewery Row",
+          "path": "/schedule/wednesday-brewery-row",
+          "body": {
+            "processed": "<p>Hump day calls for tacos and craft beer! We park right outside Iron Rail Brewing Co. every Wednesday evening. Grab your favorite brew inside, then come out and order from our full menu. Live music on the patio most weeks.</p>",
+            "summary": "Hump day calls for tacos and craft beer! We park right outside Iron Rail Brewing Co. every Wednesday evening. Grab your favorite brew inside, then come out and order from our full menu. Live music on "
+          },
+          "dayOfWeek": "Wednesday",
+          "locationName": "Brewery Row",
+          "address": "800 Warehouse Ave, Brewery District",
+          "startTime": "5:00 PM",
+          "endTime": "9:00 PM",
+          "neighborhood": "Brewery District",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1567129937968-cdad8f07e2f8?w=800&q=80",
+            "alt": "Food truck parked near a brewery at evening",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1567129937968-cdad8f07e2f8?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1567129937968-cdad8f07e2f8?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1567129937968-cdad8f07e2f8?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeLocationSchedule",
+          "id": "location-saturday",
+          "title": "Saturday: Downtown Farmers Market",
+          "path": "/schedule/saturday-farmers-market",
+          "body": {
+            "processed": "<p>Our busiest day of the week! We set up at the downtown farmers market every Saturday morning. Grab fresh produce from the vendors, then swing by Fuego for breakfast tacos and our famous horchata. We're located at the west entrance near the fountain.</p>",
+            "summary": "Our busiest day of the week! We set up at the downtown farmers market every Saturday morning. Grab fresh produce from the vendors, then swing by Fuego for breakfast tacos and our famous horchata. We'r"
+          },
+          "dayOfWeek": "Saturday",
+          "locationName": "Downtown Farmers Market",
+          "address": "Main Street & 3rd Ave, Downtown",
+          "startTime": "8:00 AM",
+          "endTime": "2:00 PM",
+          "neighborhood": "Downtown",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=80",
+            "alt": "Busy farmers market with food truck in background",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

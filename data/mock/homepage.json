@@ -1,0 +1,59 @@
+{
+  "data": {
+    "nodeHomepages": {
+      "__typename": "NodeHomepageConnection",
+      "nodes": [
+        {
+          "__typename": "NodeHomepage",
+          "id": "homepage",
+          "title": "Welcome to Fuego Street Kitchen",
+          "path": "/homepage",
+          "heroTitle": "Street Tacos. Real Flavor. No Boundaries.",
+          "heroSubtitle": "Fire-Grilled Tacos & More From Our Truck to You",
+          "heroDescription": {
+            "processed": "<p>Fuego Street Kitchen brings bold, authentic street food to your neighborhood. Every taco, burrito, and bowl is made from scratch using family recipes, locally sourced ingredients, and fire-grilled meats. Find us on the streets or book us for your next event.</p>",
+            "summary": "Fuego Street Kitchen brings bold, authentic street food to your neighborhood. Every taco, burrito, and bowl is made from scratch using family recipes, locally sourced ingredients, and fire-grilled mea"
+          },
+          "statsItems": [
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-served",
+              "title": "",
+              "number": "100K+",
+              "label": "Tacos Served"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-locations",
+              "title": "",
+              "number": "6",
+              "label": "Weekly Locations"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-years",
+              "title": "",
+              "number": "7",
+              "label": "Years Rolling"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-rating",
+              "title": "",
+              "number": "4.9",
+              "label": "Yelp Rating"
+            }
+          ],
+          "featuredItemsTitle": "Fan Favorites",
+          "ctaTitle": "Find Us This Week",
+          "ctaDescription": {
+            "processed": "<p>We roll to a different spot every day of the week. Check our schedule to find us near you, or follow us on social media for real-time location updates and daily specials.</p>",
+            "summary": "We roll to a different spot every day of the week. Check our schedule to find us near you, or follow us on social media for real-time location updates and daily specials."
+          },
+          "ctaPrimary": "View Schedule",
+          "ctaSecondary": "Book for Your Event"
+        }
+      ]
+    }
+  }
+}
