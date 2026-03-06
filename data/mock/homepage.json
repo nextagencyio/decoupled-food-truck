@@ -19,28 +19,28 @@
               "__typename": "ParagraphStatItem",
               "id": "stat-served",
               "title": "",
-              "number": "100K+",
+              "number": "100K+", "value": "100K+",
               "label": "Tacos Served"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-locations",
               "title": "",
-              "number": "6",
+              "number": "6", "value": "6",
               "label": "Weekly Locations"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-years",
               "title": "",
-              "number": "7",
+              "number": "7", "value": "7",
               "label": "Years Rolling"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-rating",
               "title": "",
-              "number": "4.9",
+              "number": "4.9", "value": "4.9",
               "label": "Yelp Rating"
             }
           ],
