@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import MenuItemCard from '../components/MenuItemCard'
 
 export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Menu | Rolling Flame Kitchen',

@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import LocationScheduleCard from '../components/LocationScheduleCard'
 
 export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Location Schedules | Rolling Flame Kitchen',
