@@ -24,7 +24,7 @@ interface MenuItemByPathData {
 async function getMenuItem(path: string): Promise<DrupalMenuItem | null> {
   try {
     const client = getClient()
-    const { data } = await client.raw(GET_MENU_ITEM_BY_PATH, { path })
+    const data = await client.raw(GET_MENU_ITEM_BY_PATH, { path })
     return data?.route?.entity || null
   } catch (error) {
     console.error('Error fetching menu item:', error)

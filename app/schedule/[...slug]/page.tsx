@@ -24,7 +24,7 @@ interface LocationScheduleByPathData {
 async function getLocationSchedule(path: string): Promise<DrupalLocationSchedule | null> {
   try {
     const client = getClient()
-    const { data } = await client.raw(GET_LOCATION_SCHEDULE_BY_PATH, { path })
+    const data = await client.raw(GET_LOCATION_SCHEDULE_BY_PATH, { path })
     return data?.route?.entity || null
   } catch (error) {
     console.error('Error fetching location schedule:', error)
