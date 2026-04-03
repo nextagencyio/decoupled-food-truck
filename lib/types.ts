@@ -26,35 +26,16 @@ export interface DrupalNode {
   }
 }
 
-export interface DrupalArticle extends DrupalNode {
-  body?: {
-    processed: string
-    summary?: string
-  }
-  image?: {
-    url: string
-    alt?: string
-    width?: number
-    height?: number
-    variations?: Array<{
-      name: string
-      url: string
-      width: number
-      height: number
-    }>
-  }
-}
-
-export interface ArticleTeaserData {
-  nodeArticles: {
-    nodes: DrupalArticle[]
-  }
-}
-
 export interface DrupalPage extends DrupalNode {
   body?: {
     processed: string
   }
+}
+
+export interface DrupalStatItem {
+  id: string
+  number?: string
+  label?: string
 }
 
 export interface DrupalHomepage extends DrupalNode {
@@ -63,24 +44,14 @@ export interface DrupalHomepage extends DrupalNode {
   heroDescription?: {
     processed: string
   }
-  featuresTitle?: string
-  featuresSubtitle?: string
-  featuresItems?: DrupalFeature[]
+  statsItems?: DrupalStatItem[]
+  featuredItemsTitle?: string
   ctaTitle?: string
   ctaDescription?: {
     processed: string
   }
   ctaPrimary?: string
   ctaSecondary?: string
-}
-
-export interface DrupalFeature {
-  id: string
-  title: string
-  description?: {
-    processed: string
-  }
-  icon?: string
 }
 
 export interface HomepageData {

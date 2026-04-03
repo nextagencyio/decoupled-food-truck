@@ -1,78 +1,6 @@
 // Tagged template that returns the query string
 const gql = (strings: TemplateStringsArray, ...values: any[]) => strings.reduce((a, s, i) => a + s + (values[i] || ''), '')
 
-export const GET_ARTICLE_TEASERS = gql`
-  query GetArticleTeasers($first: Int = 10) {
-    nodeArticles(first: $first, sortKey: CREATED_AT) {
-      nodes {
-        id
-        title
-        path
-        created {
-          timestamp
-        }
-        changed {
-          timestamp
-        }
-        ... on NodeArticle {
-          body {
-            processed
-            summary
-          }
-          image {
-            url
-            alt
-            width
-            height
-            variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-              name
-              url
-              width
-              height
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
-export const GET_ARTICLE_BY_PATH = gql`
-  query GetArticleByPath($path: String!) {
-    route(path: $path) {
-      ... on RouteInternal {
-        entity {
-          ... on NodeArticle {
-            id
-            title
-            body {
-              processed
-            }
-            created {
-              timestamp
-            }
-            changed {
-              timestamp
-            }
-            image {
-              url
-              alt
-              width
-              height
-              variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-                name
-                url
-                width
-                height
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
 export const GET_HOMEPAGE_DATA = gql`
   query GetHomepageData {
     nodeHomepages(first: 1) {
@@ -82,11 +10,11 @@ export const GET_HOMEPAGE_DATA = gql`
         path
         heroTitle
         heroSubtitle
-        heroDescription { processed summary }
-        statsItems { ... on ParagraphStatItem { id title description { processed } icon } }
+        heroDescription { processed }
+        statsItems { ... on ParagraphStatItem { id number label } }
         featuredItemsTitle
         ctaTitle
-        ctaDescription { processed summary }
+        ctaDescription { processed }
         ctaPrimary
         ctaSecondary
       }
@@ -100,38 +28,16 @@ export const GET_NODE_BY_PATH = gql`
       ... on RouteInternal {
         entity {
           ... on NodePage {
+            __typename
             id
             title
+            path
             body {
               processed
-            }
-          }
-          ... on NodeArticle {
-            id
-            title
-            body {
-              processed
-            }
-            created {
-              timestamp
-            }
-            changed {
-              timestamp
-            }
-            image {
-              url
-              alt
-              width
-              height
-              variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-                name
-                url
-                width
-                height
-              }
             }
           }
           ... on NodeHomepage {
+            __typename
             id
             title
             heroTitle
@@ -139,24 +45,47 @@ export const GET_NODE_BY_PATH = gql`
             heroDescription {
               processed
             }
-            featuresTitle
-            featuresSubtitle
-            featuresItems {
-              ... on ParagraphFeatureItem {
+            statsItems {
+              ... on ParagraphStatItem {
                 id
-                title
-                description {
-                  processed
-                }
-                icon
+                number
+                label
               }
             }
+            featuredItemsTitle
             ctaTitle
             ctaDescription {
               processed
             }
             ctaPrimary
             ctaSecondary
+          }
+          ... on NodeMenuItem {
+            __typename
+            id
+            title
+            path
+            body { processed summary }
+            price
+            menuCategory { ... on TermMenuCategory { id name } }
+            spiceLevel
+            dietaryInfo
+            isBestseller
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+          }
+          ... on NodeLocationSchedule {
+            __typename
+            id
+            title
+            path
+            body { processed summary }
+            dayOfWeek
+            locationName
+            address
+            startTime
+            endTime
+            neighborhood
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
         }
       }
@@ -175,7 +104,7 @@ export const GET_MENU_ITEMS = gql`
         ... on NodeMenuItem {
           body { processed summary }
           price
-          menuCategory
+          menuCategory { ... on TermMenuCategory { id name } }
           spiceLevel
           dietaryInfo
           isBestseller
@@ -195,13 +124,13 @@ export const GET_MENU_ITEM_BY_PATH = gql`
             id
             title
             path
-          body { processed summary }
-          price
-          menuCategory
-          spiceLevel
-          dietaryInfo
-          isBestseller
-          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+            body { processed summary }
+            price
+            menuCategory { ... on TermMenuCategory { id name } }
+            spiceLevel
+            dietaryInfo
+            isBestseller
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
         }
       }

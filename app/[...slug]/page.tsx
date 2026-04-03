@@ -5,17 +5,23 @@ import ErrorBoundary from '../components/ErrorBoundary'
 import HomepageRenderer from '../components/HomepageRenderer'
 import ResponsiveImage from '../components/ResponsiveImage'
 import { Metadata } from 'next'
+import { GET_NODE_BY_PATH } from '@/lib/queries'
 
 export const revalidate = 300
 export const dynamic = 'force-dynamic'
+
+async function getEntityByPath(path: string) {
+  const client = getClient()
+  const data = await client.raw(GET_NODE_BY_PATH, { path })
+  return data?.route?.entity || null
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
   const resolvedParams = await params
   const path = `/${(resolvedParams.slug || []).join('/')}`
   try {
-    const client = getClient()
-    const page = await client.getEntryByPath(path)
-    const title = (page as any)?.title || 'Page'
+    const entity = await getEntityByPath(path)
+    const title = entity?.title || 'Page'
     return { title }
   } catch {
     return { title: 'Page' }
@@ -37,10 +43,8 @@ function PageNotFound({ path }: { path: string }) {
 export default async function GenericPage({ params }: { params: Promise<{ slug: string[] }> }) {
   const resolvedParams = await params
   const path = `/${(resolvedParams.slug || []).join('/')}`
-  const client = getClient()
-
   try {
-    const entity = await client.getEntryByPath(path) as any
+    const entity = await getEntityByPath(path) as any
     if (!entity) {
       return (
         <div className="min-h-screen bg-gray-100">
